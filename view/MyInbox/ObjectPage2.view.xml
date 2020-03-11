@@ -1,0 +1,94 @@
+<core:View controllerName="UI5FioriForTools.controller.MyInbox.ObjectPage2" height="100%" 
+  xmlns:core="sap.ui.core" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:m="sap.m" 
+  xmlns="sap.uxap">
+  <ObjectPageLayout enableLazyLoading="true">
+    <headerTitle>
+      <ObjectPageHeader objectTitle="Replicating Cost Center" objectSubtitle="Replicating Cost Centers to Employee Central">
+        <actions>
+          <ObjectPageHeaderActionButton text="Set Complete" type="Transparent" hideText="false" importance="Low" press="onPressComplete"/>
+          <ObjectPageHeaderActionButton text="Show Logs" type="Transparent" hideText="false"/>
+        </actions>
+      </ObjectPageHeader>
+    </headerTitle>
+    <headerContent>
+      <l:VerticalLayout>
+        <m:ObjectStatus title="Task" text="Parameterization"/>
+        <m:ObjectStatus title="Role" text="Administration"/>
+        <m:ObjectStatus title="Created on" text="July 30, 2017"/>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleM="false" visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+    </headerContent>
+    <sections>
+      <ObjectPageSection title="my section">
+        <subSections>
+          <ObjectPageSubSection id="Section2-1" mode="Expanded" title="Parameters">
+            <blocks>
+              <ObjectPageLazyLoader stashed="true">
+                <m:VBox class="sapUiSmallMargin">
+                  <f:SimpleForm title="Cloud Platform Integration" class="sapUiSmallMarginBottom" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                    <m:Label text="Use External Cost Center"/>
+                    <m:CheckBox text=""></m:CheckBox>
+                    <m:Label text="Default Language"/>
+                    <m:ComboBox>
+                      <core:Item text="zh-CN" />
+                      <core:Item text="de_DE" />
+                      <core:Item text="en_EN" />
+                      <core:Item text="en_US" />
+                      <core:Item text="fr_FR" />
+                      <core:Item text="pt_BR" />
+                    </m:ComboBox>
+                    <m:Label text="Additional Languages"/>
+                    <m:MultiInput type="Text" placeholder="Type language ..." showValueHelp="false" suggestionItems="{
+                          path: 'languages>/LanguageCollection',
+                          sorter: { path: 'languages>Name' }
+                        }">
+                      <core:Item text="{languages>Name}"/>
+                    </m:MultiInput>
+                    <m:Label text="Enable Payload Logging"/>
+                    <m:CheckBox text=""></m:CheckBox>
+                    <m:Label text="Cloud Platform Integration User ID"/>
+                    <m:MultiInput type="Text" placeholder="Type name of user ..." showValueHelp="false">
+                      <core:Item text="P_User_ID"/>
+                    </m:MultiInput>
+                    <m:Label text="SFSF API User"/>
+                    <m:MultiInput type="Text" placeholder="Type name of user ..." showValueHelp="false">
+                      <core:Item text="SFSF_User_ID"/>
+                    </m:MultiInput>
+                    <m:Label text="Package Name"/>
+                    <m:Input type="Text" enabled="true" editable="false" value="ERP to Employee Central Cost Center"/>
+                    <m:Label text="Sender Address:"/>
+                    <m:Input type="inputUrl" placeholder="Enter Address..." enabled="true" editable="true" value="/ERP_to_EC_CostCenter_Replication"/>
+                  </f:SimpleForm>
+                  <f:SimpleForm title="DB" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                    <m:Label text="Gateway Host"/>
+                    <m:Input type="Text" enabled="true" editable="false" value="ldcis2y"/>
+                    <m:Label text="Gateway Host"/>
+                    <m:Input type="Text" enabled="true" editable="false" value="29"/>
+                    <m:Label text="Gateway Trusted RFC Connection"/>
+                    <m:Input type="Text" placeholder="Enter Connection..." enabled="true" editable="true" value="GATEWAY_TRUSTED_CON"/>
+                    <m:Label text="Gateway Logon Language"/>
+                    <m:Input type="Text" placeholder="Enter Language..." enabled="true" editable="true" value="en_EN"/>
+                    <m:Label text="Gateway Logon Client"/>
+                    <m:Input type="Text" placeholder="Enter Client..." enabled="true" editable="true" value="300"/>
+                  </f:SimpleForm>
+                </m:VBox>
+              </ObjectPageLazyLoader>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</core:View>

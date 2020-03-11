@@ -1,0 +1,64 @@
+<core:View controllerName="UI5FioriForTools.controller.MyInbox.ObjectPage4" height="100%" 
+  xmlns:core="sap.ui.core" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:m="sap.m" 
+  xmlns="sap.uxap">
+  <ObjectPageLayout enableLazyLoading="true">
+    <headerTitle>
+      <ObjectPageHeader objectTitle="Replicating Cost Center" objectSubtitle="Replicating Cost Centers to Employee Central">
+        <actions>
+          <ObjectPageHeaderActionButton id="actExecute4" text="Execute" type="Transparent" hideText="false" importance="High" press="onPressExecute"/>
+          <ObjectPageHeaderActionButton text="Set Complete" type="Transparent" hideText="false" importance="Low" press="onPressComplete"/>
+          <ObjectPageHeaderActionButton text="Show Logs" type="Transparent" hideText="false" importance="Low"/>
+        </actions>
+      </ObjectPageHeader>
+    </headerTitle>
+    <headerContent>
+      <l:VerticalLayout>
+        <m:ObjectStatus title="Task" text="Copy Cost Center Integration Flow"/>
+        <m:ObjectStatus title="Role" text="Cloud Platform Integration Configuration"/>
+        <m:ObjectStatus title="Created on" text="July 30, 2017"/>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleM="false" visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+    </headerContent>
+    <sections>
+      <ObjectPageSection>
+        <subSections>
+          <ObjectPageSubSection id="Section4-1" mode="Expanded" title="Description">
+            <blocks>
+              <m:Text text="Cost Center replication between SFSF EC and S/4HANA requires prepackaged integration flow content from the Cloud Platform Integration catalog. This step describes how to copy and activate the integration flow content for cost center replication." />
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection title="StepsPage">
+        <subSections>
+          <ObjectPageSubSection title="Manual Steps">
+            <blocks>
+              <m:List mode="" headerText="Walkthrough" growing="true">
+                <m:StandardListItem title="You need to navigate to the prepackaged integration content and create you own copy of the integration flow." />
+                <m:StandardListItem title="Click the 'Discover View' symbol in the left upper corner." />
+                <m:StandardListItem title="Τo see available prepackaged integration content click 'All'." />
+                <m:StandardListItem title="To find integration flow for the cost center scenario, enter 'Cost center' in the Searchtext field." />
+                <m:StandardListItem title="To save the changes, click 'ΟΚ'." />
+                <m:StandardListItem title="Click on 'ERP to Employee Central Cost Center‘." />
+                <m:StandardListItem title="To make a copy of the integration flow and to adapt it to your requirements, click 'Copy' in the right upper corner." />
+                <m:StandardListItem title="To save the changes, click 'ΟΚ'." />
+              </m:List>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</core:View>

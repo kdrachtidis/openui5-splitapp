@@ -1,0 +1,81 @@
+<core:View controllerName="UI5FioriForTools.controller.MyInbox.ObjectPage6" height="100%" 
+  xmlns:core="sap.ui.core" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:m="sap.m" 
+  xmlns="sap.uxap">
+  <ObjectPageLayout enableLazyLoading="true">
+    <headerTitle>
+      <ObjectPageHeader objectTitle="Replicating Cost Center" objectSubtitle="Replicating Cost Centers to Employee Central">
+        <actions>
+          <ObjectPageHeaderActionButton id="actExecute6" text="Execute" type="Transparent" hideText="false" importance="High" press="onPressExecute"/>
+          <ObjectPageHeaderActionButton text="Set Complete" type="Transparent" hideText="false" importance="Low" press="onPressComplete"/>
+          <ObjectPageHeaderActionButton text="Show Logs" type="Transparent" hideText="false" importance="Low"/>
+        </actions>
+      </ObjectPageHeader>
+    </headerTitle>
+    <headerContent>
+      <l:VerticalLayout>
+        <m:ObjectStatus title="Task" text="Create Trusted Connection"/>
+        <m:ObjectStatus title="Role" text="DB Configuration"/>
+        <m:ObjectStatus title="Created on" text="July 30, 2017"/>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleM="false" visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+    </headerContent>
+    <sections>
+      <ObjectPageSection>
+        <subSections>
+          <ObjectPageSubSection id="Section6-1" mode="Expanded" title="Description">
+            <blocks>
+              <m:Text text="For the communication between the S/4HANA system and the Gateway a trusted RFC connection is required. The following procedure will execute a task list performing the required steps." />
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection title="StepsPage">
+        <subSections>
+          <ObjectPageSubSection title="Manual Steps">
+            <blocks>
+              <m:List mode="" headerText="Walkthrough" growing="true">
+                <m:StandardListItem title="Log on to your DB system."/>
+                <!--<m:StandardListItem title="Open transaction 'STC01'."/>-->
+                <m:StandardListItem title="In field 'Task List' enter 'SAP_SAP2GATEWAY_TRUSTED_CONFIG'." />
+                <m:StandardListItem title="Click the 'Generate Task List Run' symbol." />
+                <m:StandardListItem title="In the 'Task List' table click on the 'Change Parameters' icon in the 'Parameter' column." />
+                <m:StandardListItem title="In field 'RFC Destination' enter 'GATEWAY_TRUSTED_CON'." />
+                <m:StandardListItem title="In field 'Target Server' enter 'ldcis2y'." />
+                <m:StandardListItem title="In field 'Instance No.'' enter '29'." />
+                <m:StandardListItem title="In field 'Language' enter 'en'."/>
+                <m:StandardListItem title="In field 'Client' enter '300'."/>
+                <m:StandardListItem title="Click on the 'Save' button."/>
+                <m:StandardListItem title="Navigate back."/>
+                <m:StandardListItem title="Click the 'Generate Task List Run' symbol."/>
+                <m:StandardListItem title="Close the application."/>
+              </m:List>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection title="StepsPage">
+        <subSections>
+          <ObjectPageSubSection title="Links">
+            <blocks>
+              <m:VBox>
+                <m:Link text="DB system" target="_blank" href="https://github.wdf.sap.corp/pages/D059136/cias-s4" />
+              </m:VBox>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</core:View>

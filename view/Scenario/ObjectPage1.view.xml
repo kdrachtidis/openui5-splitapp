@@ -1,0 +1,33 @@
+<core:View controllerName="UI5FioriForTools.controller.Scenario.ObjectPage1" height="100%" 
+  xmlns:core="sap.ui.core" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:mvc="sap.ui.core.mvc" 
+  xmlns:m="sap.m" 
+  xmlns="sap.uxap">
+  <ObjectPageLayout enableLazyLoading="true">
+    <headerTitle>
+      <ObjectPageHeader objectTitle="Replicating Cost Center" objectSubtitle="Replicating Cost Centers to Employee Central"></ObjectPageHeader>
+    </headerTitle>
+    <headerContent>
+      <l:VerticalLayout>
+        <m:ObjectStatus title="Execution Instance ID" text="5ca679d5-b8a8-11e7-9b49-00163e412ead"/>
+        <m:ObjectStatus title="Status" text="Running" state="Success"/>
+        <m:ProgressIndicator percentValue="72" displayValue="5/7" showValue="true" state="None"/>
+      </l:VerticalLayout>
+    </headerContent>
+    <sections>
+      <ObjectPageSection title="my section">
+        <subSections>
+          <ObjectPageSubSection id="Section1a-1" mode="Expanded" title="Details">
+            <blocks>
+              <ObjectPageLazyLoader stashed="true">
+                <mvc:XMLView viewName="UI5FioriForTools.view.Scenario.Table1"/>
+              </ObjectPageLazyLoader>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</core:View>

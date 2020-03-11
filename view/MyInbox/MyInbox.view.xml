@@ -1,0 +1,110 @@
+<mvc:View controllerName="UI5FioriForTools.controller.MyInbox.MyInbox" 
+  xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" height="100%" 
+  xmlns:mvc="sap.ui.core.mvc" 
+  xmlns="sap.m">
+  <Page showHeader="false" title="My Inbox">
+    <content>
+      <SplitApp id="MyInboxSplitApp" initialDetail="MyInboxDetailPage0" initialMaster="master" orientationChange="onOrientationChange">
+        <detailPages>
+          <!--<MessagePage id="MyInboxDetailPage0" text="My Inbox contains currently no items." description="" icon="sap-icon://documents" showHeader="false"></MessagePage>-->
+          <Page id="MyInboxDetailPage0" class="sapUiStdPage" title="Open Item" showHeader="false" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.MyInbox.ObjectPage0"/>
+            </content>
+          </Page>
+          <Page id="MyInboxDetailPage1" class="sapUiStdPage" title="Open Item" showHeader="true" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.MyInbox.ObjectPage1"/>
+            </content>
+          </Page>
+          <Page id="MyInboxDetailPage2" class="sapUiStdPage" title="Open Item" showHeader="true" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.MyInbox.ObjectPage2"/>
+            </content>
+          </Page>
+          <Page id="MyInboxDetailPage3" class="sapUiStdPage" title="Open Item" showHeader="true" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.MyInbox.ObjectPage3"/>
+            </content>
+          </Page>
+          <Page id="MyInboxDetailPage4" class="sapUiStdPage" title="Open Item" showHeader="true" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.MyInbox.ObjectPage4"/>
+            </content>
+          </Page>
+          <Page id="MyInboxDetailPage5" class="sapUiStdPage" title="Open Item" showHeader="true" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.MyInbox.ObjectPage5"/>
+            </content>
+          </Page>
+          <Page id="MyInboxDetailPage6" class="sapUiStdPage" title="Open Item" showHeader="true" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.MyInbox.ObjectPage6"/>
+            </content>
+          </Page>
+          <Page id="MyInboxDetailPage7" class="sapUiStdPage" title="Open Item" showHeader="true" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.MyInbox.ObjectPage7"/>
+            </content>
+          </Page>
+          <MessagePage id="MyInboxDetailPage8" text="My Inbox contains currently no items." description="" icon="sap-icon://documents" showHeader="false"></MessagePage>
+        </detailPages>
+        <masterPages>
+          <Page class="sapUiStdPage" icon="sap-icon://action" id="MyInboxOpenItems" navButtonPress="onPressMasterBack" showHeader="true" showNavButton="false" title="All Items (0)">
+            <content>
+              <List mode="SingleSelectMaster" selectionChange="onListItemPress">
+                <items>
+                <ObjectListItem id="MyInboxObjectListItem0" custom:to="MyInboxDetailPage0" title="Replicating Cost Centers" type="Active" selected="false" visible="false">
+                    <attributes>
+                      <ObjectAttribute text="Assign Responsibilities"/>
+                    </attributes>
+                  </ObjectListItem>
+                  <ObjectListItem id="MyInboxObjectListItem1" custom:to="MyInboxDetailPage1" title="Replicating Cost Centers" type="Active" selected="false" visible="false">
+                    <attributes>
+                      <ObjectAttribute text="Assign Responsibilities"/>
+                    </attributes>
+                  </ObjectListItem>
+                  <ObjectListItem id="MyInboxObjectListItem2" custom:to="MyInboxDetailPage2" title="Replicating Cost Centers" type="Active" selected="false" visible="false">
+                    <attributes>
+                      <ObjectAttribute text="Parameterization"/>
+                    </attributes>
+                  </ObjectListItem>
+                  <ObjectListItem id="MyInboxObjectListItem3" custom:to="MyInboxDetailPage3" title="Replicating Cost Centers" type="Active" selected="false" visible="false">
+                    <attributes>
+                      <ObjectAttribute text="Deploy Credentials"/>
+                    </attributes>
+                  </ObjectListItem>
+                  <ObjectListItem id="MyInboxObjectListItem4" custom:to="MyInboxDetailPage4" title="Replicating Cost Centers" type="Active" selected="false" visible="false">
+                    <attributes>
+                      <ObjectAttribute text="Copy Cost Center Integration Flow"/>
+                    </attributes>
+                  </ObjectListItem>
+                  <ObjectListItem id="MyInboxObjectListItem5" custom:to="MyInboxDetailPage5" title="Replicating Cost Centers" type="Active" selected="false" visible="false">
+                    <attributes>
+                      <ObjectAttribute text="Configure Integration Flow"/>
+                    </attributes>
+                  </ObjectListItem>
+                  <ObjectListItem id="MyInboxObjectListItem6" custom:to="MyInboxDetailPage6" title="Replicating Cost Centers" type="Active" selected="false" visible="false">
+                    <attributes>
+                      <ObjectAttribute text="Create Trusted Connection"/>
+                    </attributes>
+                  </ObjectListItem>
+                  <ObjectListItem id="MyInboxObjectListItem7" custom:to="MyInboxDetailPage7" title="Replicating Cost Centers" type="Active" selected="false" visible="false">
+                    <attributes>
+                      <ObjectAttribute text="Summary"/>
+                    </attributes>
+                  </ObjectListItem>
+                  <ObjectListItem id="MyInboxObjectListItem8" custom:to="MyInboxDetailPage8" title="Empty" type="Active" selected="false" visible="false">
+                    <attributes>
+                      <ObjectAttribute text="Assign Responsibilities"/>
+                    </attributes>
+                  </ObjectListItem>
+                </items>
+              </List>
+            </content>
+          </Page>
+        </masterPages>
+      </SplitApp>
+    </content>
+  </Page>
+</mvc:View>

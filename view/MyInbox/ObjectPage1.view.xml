@@ -1,0 +1,71 @@
+<core:View controllerName="UI5FioriForTools.controller.MyInbox.ObjectPage1" height="100%" 
+  xmlns:core="sap.ui.core" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:m="sap.m" 
+  xmlns="sap.uxap">
+  <ObjectPageLayout enableLazyLoading="true">
+    <headerTitle>
+      <ObjectPageHeader objectTitle="Replicating Cost Center" objectSubtitle="Replicating Cost Centers to Employee Central">
+        <actions>
+          <ObjectPageHeaderActionButton text="Set Complete" type="Transparent" hideText="false" importance="Low" press="onPressComplete"/>
+          <ObjectPageHeaderActionButton text="Show Logs" type="Transparent" hideText="false"/>
+        </actions>
+      </ObjectPageHeader>
+    </headerTitle>
+    <headerContent>
+      <l:VerticalLayout>
+        <m:ObjectStatus title="Task" text="Assign Responsibilities"/>
+        <m:ObjectStatus title="Role" text="Administration"/>
+        <m:ObjectStatus title="Created on" text="July 30, 2017"/>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleM="false" visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+    </headerContent>
+    <sections>
+      <ObjectPageSection title="my section">
+        <subSections>
+          <ObjectPageSubSection id="Section1-1" mode="Expanded" title="Role Assignment">
+            <blocks>
+              <ObjectPageLazyLoader stashed="true">
+                <m:VBox class="sapUiSmallMargin">
+                  <f:SimpleForm title="Workflow task onwers" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                    <m:Label text="Parameterization"/>
+                    <m:MultiInput type="Text" placeholder="Type name of owner ..." showValueHelp="false" suggestionItems="{
+                          path: '/UserCollection',
+                          sorter: { path: 'Name' }
+                        }">
+                      <core:Item text="{Name}"/>
+                    </m:MultiInput>
+                    <m:Label text="Cloud Platform Integration Configuration"/>
+                    <m:MultiInput type="Text" placeholder="Type name of owner ..." showValueHelp="false" suggestionItems="{
+                          path: '/UserCollection',
+                          sorter: { path: 'Name' }
+                        }">
+                      <core:Item text="{Name}"/>
+                    </m:MultiInput>
+                    <m:Label text="DB Configuration"/>
+                    <m:MultiInput type="Text" placeholder="Type name of owner ..." showValueHelp="false" suggestionItems="{
+                          path: '/UserCollection',
+                          sorter: { path: 'Name' }
+                        }">
+                      <core:Item text="{Name}"/>
+                    </m:MultiInput>
+                  </f:SimpleForm>
+                </m:VBox>
+              </ObjectPageLazyLoader>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</core:View>

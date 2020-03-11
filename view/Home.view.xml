@@ -1,0 +1,5 @@
+<mvc:View controllerName="UI5FioriForTools.controller.Home" height="100%" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+  <MessagePage text="No page found." description="" icon="sap-icon://document" showHeader="false">
+   
+  </MessagePage>
+</mvc:View>

@@ -1,0 +1,98 @@
+{
+  "_version": "1.1.0",
+  "sap.app": {
+    "_version": "1.1.0",
+    "id": "sap.ui.demo.toolpageapp",
+    "type": "application",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_hcb",
+      "sap_bluecrystal",
+      "sap_belize"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "rootView": {
+      "viewName": "UI5FioriForTools.view.init",
+      "type": "XML",
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.30",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.tnt": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlId": "MainContainer",
+        "viewType": "XML",
+        "controlAggregation": "pages",
+        "viewPath": "UI5FioriForTools.view",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "home",
+          "target": "home"
+        },
+        {
+          "pattern": "MyInbox",
+          "name": "MyInbox",
+          "target": "MyInbox"
+        },
+        {
+          "pattern": "Scenario",
+          "name": "Scenario",
+          "target": "Scenario"
+        },
+        {
+          "pattern": "importantlinks",
+          "name": "importantlinks",
+          "target": "importantlinks"
+        },
+        {
+          "pattern": "legal",
+          "name": "legal",
+          "target": "legal"
+        }
+      ],
+      "targets": {
+        "home": {
+          "viewName": "Home"
+        },
+        "MyInbox": {
+          "viewName": "MyInbox.MyInbox"
+        },
+        "Scenario": {
+          "viewName": "Scenario.Scenario"
+        },
+        "importantlinks": {
+          "viewName": "ImportantLinks"
+        },
+        "legal": {
+          "viewName": "Legal"
+        }
+      }
+    }
+  }
+}

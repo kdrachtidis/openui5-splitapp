@@ -1,0 +1,13 @@
+<mvc:View controllerName="UI5FioriForTools.controller.ImportantLinks" height="100%" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+  <Page class="sapUiContentPadding" title="Important Links">
+    <content>
+      <VBox>
+        <Text text="Please visit the links below for more information on the respective topics:"/>
+        <Text text=""/>
+      </VBox>
+      <VBox>
+        
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

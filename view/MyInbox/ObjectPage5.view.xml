@@ -1,0 +1,65 @@
+<core:View controllerName="UI5FioriForTools.controller.MyInbox.ObjectPage5" height="100%" 
+  xmlns:core="sap.ui.core" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:m="sap.m" 
+  xmlns="sap.uxap">
+  <ObjectPageLayout enableLazyLoading="true">
+    <headerTitle>
+      <ObjectPageHeader objectTitle="Replicating Cost Center" objectSubtitle="Replicating Cost Centers to Employee Central">
+        <actions>
+          <ObjectPageHeaderActionButton id="actExecute5" text="Execute" type="Transparent" hideText="false" importance="High" press="onPressExecute"/>
+          <ObjectPageHeaderActionButton text="Set Complete" type="Transparent" hideText="false" importance="Low" press="onPressComplete"/>
+          <ObjectPageHeaderActionButton text="Show Logs" type="Transparent" hideText="false" importance="Low"/>
+        </actions>
+      </ObjectPageHeader>
+    </headerTitle>
+    <headerContent>
+      <l:VerticalLayout>
+        <m:ObjectStatus title="Task" text="Configure Integration Flow"/>
+        <m:ObjectStatus title="Role" text="Cloud Platform Integration Configuration"/>
+        <m:ObjectStatus title="Created on" text="July 30, 2017"/>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleM="false" visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+    </headerContent>
+    <sections>
+      <ObjectPageSection>
+        <subSections>
+          <ObjectPageSubSection id="Section5-1" mode="Expanded" title="Description">
+            <blocks>
+              <m:Text text="The integration flow content required for SFSF EC to S/4HANA communication requires configuration. This step describes how to configure the integration flow for cost center replication." />
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection title="StepsPage">
+        <subSections>
+          <ObjectPageSubSection title="Manual Steps">
+            <blocks>
+              <m:List mode="" headerText="Walkthrough" growing="true">
+                <m:StandardListItem title="To adapt the copied integration flow to your needs, click the 'Edit view' symbol in the left upper corner." />
+                <m:StandardListItem title="To find your copied integration flow, enter in the 'Filter' text field in the right upper area: 'ERP to Employee Central Cost Center'." />
+                <m:StandardListItem title="To navigate to your iFlow, click on 'ERP to Employee Central Cost Center'." />
+                <m:StandardListItem title="To get to the configurable parts of the package, click 'ARTIFACTS' tab." />
+                <m:StandardListItem title="On the right side, click the arrow symbol to get the context menu opened." />
+                <m:StandardListItem title="Select 'Configure' from the menu to get a window opened, where you can specify the parameters for the configuration." />
+                <m:StandardListItem title="Click the 'Sender' tab. The Sender in this scenario is the S/4HANA system." />
+                <m:StandardListItem title="In the 'Sender' field enter 'SAP_ERP'." />
+                <m:StandardListItem title="In the 'Adapter Type' field enter 'iDOC'." />
+              </m:List>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</core:View>

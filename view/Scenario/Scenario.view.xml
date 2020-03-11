@@ -1,0 +1,49 @@
+<mvc:View controllerName="UI5FioriForTools.controller.Scenario.Scenario" 
+  xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" height="100%" 
+  xmlns:mvc="sap.ui.core.mvc" 
+  xmlns="sap.m">
+  <Page class="" showHeader="false" title="Scenario Monitoring">
+    <content>
+      <SplitApp id="ScenarioSplitApp" initialDetail="ScenarioDetailPage0" initialMaster="master" orientationChange="onOrientationChange">
+        <detailPages>
+          <Page id="ScenarioDetailPage1" class="sapUiStdPage" title="Scenario" showHeader="true" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.Scenario.ObjectPage1"/>
+            </content>
+          </Page>
+          <Page id="ScenarioDetailPage2" class="sapUiStdPage" title="Scenario" showHeader="true" showNavButton="false">
+            <content>
+              <mvc:XMLView viewName="UI5FioriForTools.view.Scenario.ObjectPage2"/>
+            </content>
+          </Page>
+        </detailPages>
+        <masterPages>
+          <Page class="sapUiStdPage" icon="sap-icon://action" id="ScenarioOpenItems" navButtonPress="onPressMasterBack" showHeader="true" showNavButton="false" title="All Scenarios (5)">
+            <content>
+              <List mode="SingleSelectMaster" selectionChange="onListItemPress">
+                <items>
+                  <ObjectListItem id="ScenarioObjectListItem1" custom:to="ScenarioDetailPage1" title="Replicating Cost Center" type="Active" selected="true" visible="true">
+                    <firstStatus>
+                      <ObjectStatus text="Running" state="Success" />
+                    </firstStatus>
+                    <attributes>
+                      <ObjectAttribute text="5ca679d5-b8a8-11e7-9b49-00163e412ead"/>
+                    </attributes>
+                  </ObjectListItem>
+                  <ObjectListItem id="ScenarioObjectListItem2" custom:to="ScenarioDetailPage2" title="Cloud Integration" type="Active" selected="false" visible="true">
+                    <firstStatus>
+                      <ObjectStatus text="Running" state="Success" />
+                    </firstStatus>
+                    <attributes>
+                      <ObjectAttribute text="fd8cc8f5-b886-11e7-a497-00163"/>
+                    </attributes>
+                  </ObjectListItem>
+                </items>
+              </List>
+            </content>
+          </Page>
+        </masterPages>
+      </SplitApp>
+    </content>
+  </Page>
+</mvc:View>

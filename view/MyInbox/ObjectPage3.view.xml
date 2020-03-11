@@ -1,0 +1,72 @@
+<core:View controllerName="UI5FioriForTools.controller.MyInbox.ObjectPage3" height="100%" 
+  xmlns:core="sap.ui.core" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:m="sap.m" 
+  xmlns="sap.uxap">
+  <ObjectPageLayout enableLazyLoading="true">
+    <headerTitle>
+      <ObjectPageHeader objectTitle="Replicating Cost Center" objectSubtitle="Replicating Cost Centers to Employee Central">
+        <actions>
+          <ObjectPageHeaderActionButton id="actExecute3" text="Execute" type="Transparent" hideText="false" importance="High" press="onPressExecute"/>
+          <ObjectPageHeaderActionButton text="Set Complete" type="Transparent" hideText="false" importance="High" press="onPressComplete"/>
+          <ObjectPageHeaderActionButton text="Show Logs" type="Transparent" hideText="false" importance="Low"/>
+        </actions>
+      </ObjectPageHeader>
+    </headerTitle>
+    <headerContent>
+      <l:VerticalLayout>
+        <m:ObjectStatus title="Task" text="Deploy Credentials"/>
+        <m:ObjectStatus title="Role" text="Cloud Platform Integration Configuration"/>
+        <m:ObjectStatus title="Created on" text="July 30, 2017"/>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleM="false" visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+    </headerContent>
+    <sections>
+      <ObjectPageSection>
+        <subSections>
+          <ObjectPageSubSection id="Section3-1" mode="Expanded" title="Description">
+            <blocks>
+              <m:Text text="For the communication triggered by the Cloud Platform Integration runtime to Employee Central user credentials are required. This step describes the steps to create and deploy the credentials." />
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection title="StepsPage">
+        <subSections>
+          <ObjectPageSubSection title="Manual Steps">
+            <blocks>
+              <m:List headerText="Walkthrough" growing="true">
+                <m:StandardListItem title="Click on the CPI tenant URL to access the CPI tenant 'CPI_tenant_URL'."/>
+                <m:StandardListItem title="Enter your CPI user id 'P_User_ID'."/>
+                <m:StandardListItem title="Enter your CPI user password." />
+                <m:StandardListItem title="Click Log On." />
+                <m:StandardListItem title="In the left upper area click on 'Operations View'." />
+                <m:StandardListItem title="Under Manage Security click Security Material tile." />
+                <m:StandardListItem title="You see a list of credentials. In the right upper corner click 'Add' to add your credential artifact." />
+                <m:StandardListItem title="In the menu, click on 'User Credentials' to open a dialog for user credentials." />
+                <m:StandardListItem title="Enter in the text field 'Name' the 'GR###_CRED'."/>
+                <m:StandardListItem title="Enter in the text field 'Description' the 'GR### - User Credentials'."/>
+                <m:StandardListItem title="Enter in the text field 'User' the 'SFSF_User_ID'."/>
+                <m:StandardListItem title="Enter your SFSF user password in the text field 'Password'." />
+                <m:StandardListItem title="Repeat password."/>
+                <m:StandardListItem title="Enable checkbox 'SuccessFactors'. Then a further field 'Company ID' is added to the dialog." />
+                <m:StandardListItem title="Enter in the text field 'Company ID' the 'SFSF_Company_ID'."/>
+                <m:StandardListItem title="To deploy credentials artifact, click on 'Deploy'." />
+              </m:List>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</core:View>

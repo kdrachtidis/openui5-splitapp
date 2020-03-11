@@ -1,0 +1,98 @@
+<core:View controllerName="UI5FioriForTools.controller.MyInbox.ObjectPage7" height="100%" 
+  xmlns:core="sap.ui.core" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:m="sap.m" 
+  xmlns="sap.uxap">
+  <ObjectPageLayout enableLazyLoading="true">
+    <headerTitle>
+      <ObjectPageHeader objectTitle="Replicating Cost Center" objectSubtitle="Replicating Cost Centers to Employee Central">
+        <actions>
+          <ObjectPageHeaderActionButton id="actComplete7" text="Set Complete" type="Transparent" hideText="false" importance="Low" press="onPressComplete"/>
+          <ObjectPageHeaderActionButton text="Show Logs" type="Transparent" hideText="false"/>
+        </actions>
+      </ObjectPageHeader>
+    </headerTitle>
+    <headerContent>
+      <l:VerticalLayout>
+        <m:ObjectStatus title="Task" text="Summary"/>
+        <m:ObjectStatus title="Role" text="Administration"/>
+        <m:ObjectStatus title="Created on" text="July 30, 2017"/> 
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+      <l:VerticalLayout>
+        <l:layoutData>
+          <ObjectPageHeaderLayoutData visibleM="false" visibleS="false"/>
+        </l:layoutData>
+      </l:VerticalLayout>
+    </headerContent>
+    <sections>
+      <ObjectPageSection>
+        <subSections>
+          <ObjectPageSubSection id="Section7-1" mode="Expanded" title="Role Assignment">
+            <blocks>
+              <ObjectPageLazyLoader id="Loader1" stashed="true">
+                <m:VBox class="sapUiSmallMargin">
+                  <f:SimpleForm title="Workflow task onwers" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                    <m:Label text="Parameterization"/>
+                    <m:Text text="Francisco Gomez"/>
+                    <m:Label text="Cloud Platform Integration Configuration"/>
+                    <m:Text text="Donna  Moore"/>
+                    <m:Label text="DB Configuration"/>
+                    <m:Text text="Sabine Mayer"/>
+                  </f:SimpleForm>
+                </m:VBox>
+              </ObjectPageLazyLoader>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection>
+        <subSections>
+          <ObjectPageSubSection id="Section7-2" mode="Expanded" title="Parameters">
+            <blocks>
+              <ObjectPageLazyLoader id="Loader2" stashed="true">
+                <m:VBox class="sapUiSmallMargin">
+                  <f:SimpleForm title="Cloud Platform Integration" class="sapUiSmallMarginBottom" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                    <m:Label text="Use External Cost Center"/>
+                    <m:CheckBox text="" selected="true" enabled="false"></m:CheckBox>
+                    <m:Label text="Default Language"/>
+                    <m:Text text="en_EN"/>
+                    <m:Label text="Additional Languages"/>
+                    <m:Text text="de_DE, fr_FR"/>
+                    <m:Label text="Enable Payload Logging"/>
+                    <m:CheckBox text="" selected="true" enabled="false"></m:CheckBox>
+                    <m:Label text="Cloud Platform Integration User ID"/>
+                    <m:Text text="P_User_ID"/>
+                    <m:Label text="SFSF API User"/>
+                    <m:Text text="SFSF_User_ID"/>
+                    <m:Label text="Package Name"/>
+                    <m:Text text="ERP to Employee Central Cost Center"/>
+                    <m:Label text="Sender Address:"/>
+                    <m:Text text="/ERP_to_EC_CostCenter_Replication"/>
+                  </f:SimpleForm>
+                  <f:SimpleForm title="DB" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                    <m:Label text="Gateway Host"/>
+                    <m:Text text="ldcis2y"/>
+                    <m:Label text="Gateway Host"/>
+                    <m:Text text="29"/>
+                    <m:Label text="Gateway Trusted RFC Connection"/>
+                    <m:Text text="GATEWAY_TRUSTED_CON"/>
+                    <m:Label text="Gateway Logon Language"/>
+                    <m:Text text="en_EN"/>
+                    <m:Label text="Gateway Logon Client"/>
+                    <m:Text text="300"/>
+                  </f:SimpleForm>
+                </m:VBox>
+              </ObjectPageLazyLoader>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</core:View>
